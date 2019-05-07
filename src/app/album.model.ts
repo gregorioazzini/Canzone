@@ -5,5 +5,7 @@ export class Album
     public id : number,
     public artista : string,
     public durata : number
-    ){}
+    ){
+
+    }
 }

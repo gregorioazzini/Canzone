@@ -4,14 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'; //Importa Il modulo http
 
-import { 
+import {
 FormsModule,
   ReactiveFormsModule
  } from '@angular/forms';
+import { ListaCanzoneComponent } from './lista-canzone/lista-canzone.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaCanzoneComponent
   ],
   imports: [
     BrowserModule,
