@@ -1,11 +1,7 @@
-
-<p>
- Il titolo è:{{songList.Titolo}}
- </p>
-<p>
- La durata è:{{songList.Durata}}
- </p>
-<p>
- La data pubblicazione è:{{songList.Data}}
- </p>
-
+<div *ngIf="!nascondi">
+	<div *ngFor="let song of songList">
+		<!--Prendo una sola canzone -->
+		Il titolo è:{{song.album.title}}
+	</div>
+</div>
+<button (click)="onNascondi()">Nascondi</button>

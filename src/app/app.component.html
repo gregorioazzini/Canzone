@@ -23,8 +23,10 @@
    <li *ngFor="let song of songList">
     {{song.album.title}} : {{song | json}}
    </li>
- </ul> 
- 
+ </ul>
+
 
  {{songList | json}}
+</div>
 
+<app-lista-canzone [songList]="songList" ></app-lista-canzone>

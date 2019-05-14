@@ -16,16 +16,12 @@ export class AppComponent {
   title = "Benvenuti al canzoniere";
   albums = AlbumList;
   selectedAlbum: Album = AlbumList[0];
-  songList: Song[];
+  songList: Song[] = [];
   data: Object;
   o: Observable<Song[]>;
 
   constructor(public http : HttpClient) { }
-   makeTypedRequest(): void {
-    //oFoo : Observable<Foo[]>; va dichiarato tra gli attributi della classe
-    this.o = this.http.get<Song[]>('https://my-json-server.typicode.com/malizia-g/hotel/songlist');
-    this.o.subscribe(data => { this.songList = data;  });
-  }
+  
 
 
   //Controllo se l'id dell'album selezionato è nell'elenco.
